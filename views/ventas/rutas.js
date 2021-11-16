@@ -20,16 +20,16 @@ rutasVentas.route("/ventas").post ((req, res) =>{
     crearVenta(req.body, genericCallback(res))
 });
 
-rutasVentas.route('/ventas/:id').get  ((req, res)=> {
+rutasVentas.route('/ventas/:id/').get  ((req, res)=> {
     buscarVenta(req.params.id,genericCallback(res));
 });
 
-rutasVentas.route('/ventas/:id').patch ((req, res) =>{
+rutasVentas.route('/ventas/:id/').patch ((req, res) =>{
     editarVentas(req.params.id,req.body, genericCallback(res));
 
 });
 
-rutasVentas.route('/ventas/:id').delete ((req, res) =>{
+rutasVentas.route('/ventas/:id/').delete ((req, res) =>{
     eliminarVentas(req.params.id, genericCallback(res));
 });
 
