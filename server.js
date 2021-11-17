@@ -11,7 +11,7 @@ import jwks from 'jwks-rsa';
 
 dotenv.config({ path:"./.env"});
 
-
+const port = process.env.PORT || 5000;
 const app = Express();
 
 
@@ -38,8 +38,8 @@ app.use(rutasUsuarios);
 app.use(rutasProductos);
 
 const main = () => {
-    app.listen(process.env.PORT,()=>{
-        console.log("escuchando puerto 5000");
+    app.listen(port,()=>{
+        console.log('esuchando puerto',{port});
   });
 };
 
