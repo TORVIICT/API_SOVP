@@ -13,6 +13,7 @@ const genericCallback = (res) => (err, result) => {
   };
 
 rutasProductos.route('/productos').get  ((req, res)=> {
+  console.log('alguien hizo get en la ruta /productos');
     queryAllProductos(genericCallback(res));
 });
 
